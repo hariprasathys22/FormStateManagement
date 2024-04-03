@@ -1,0 +1,58 @@
+.userData-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+.userData-get{
+    margin-bottom: 40px;
+}
+.userData-container .userData-head {
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.userData-container .userData-forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userData-container .userData-forms input {
+  margin-bottom: 30px;
+  width: 30rem;
+  height: 3rem;
+  border-radius: 10px;
+  border: none;
+  padding-left: 15px;
+  font-size: 18px;
+}
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  font-size: 18px;
+}
+.userData-container .userData-btn {
+  padding: 10px 30px;
+  background-color: #00137d;
+  font-size: 20px;
+  color: #fff;
+  display: grid;margin: auto;
+}
+
+.userData-details{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userData-details table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.userData-details td,
+th {
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-align: center;
+}
