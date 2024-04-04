@@ -38,6 +38,14 @@ input[type="password"]::placeholder {
   font-size: 20px;
   color: #fff;
   display: grid;margin: auto;
+  border-radius: 10px;
+  border: none;
+  transition: 0.5s;
+}
+.userData-btn:hover{
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
 }
 
 .userData-details{
@@ -55,4 +63,19 @@ th {
   border: 1px solid black;
   padding: 10px 20px;
   text-align: center;
+}
+.userData-optionBtn{
+  margin-left: 20px;
+  padding: 6px 20px;
+  background-color: #00137d;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.userData-optionBtn:hover{
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
 }

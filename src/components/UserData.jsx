@@ -19,6 +19,16 @@ const UserData = () => {
     setFormData(form);
   };
 
+  const handleEdit = (index) => {
+    const userToEdit = userData[index];
+    setFormData(userToEdit);
+    setUserData((curuser) => curuser.filter((_, i) => i !== index));
+  };
+
+  const handleDelete = (index) => {
+    setUserData((user) => user.filter((_, i) => i !== index));
+  };
+
   return (
     <div className="userData-container">
       <div className="userData-get">
@@ -59,16 +69,31 @@ const UserData = () => {
               <th>UserName</th>
               <th>Password</th>
               <th>Salary</th>
+              <th>Options</th>
             </tr>
           </thead>
           <tbody>
-          {userData.map((user, index) => (
-            <tr key={index}>
-              <td>{user.userName}</td>
-              <td>{user.password}</td>
-              <td>{user.salary}</td>
-            </tr>
-          ))}
+            {userData.map((user, index) => (
+              <tr key={index}>
+                <td>{user.userName}</td>
+                <td>{user.password}</td>
+                <td>{user.salary}</td>
+                <td>
+                  <button
+                    onClick={() => handleEdit(index)}
+                    className="userData-optionBtn"
+                  >
+                    Edit
+                  </button>
+                  <button
+                    onClick={() => handleDelete(index)}
+                    className="userData-optionBtn"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
